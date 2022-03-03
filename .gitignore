@@ -1,3 +1,4 @@
 *.terraform*
 /.vs
 /labs-azure/single-vm/main.tf
+/terraform/credentials.tf

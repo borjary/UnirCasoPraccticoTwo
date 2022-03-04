@@ -1,0 +1,12 @@
+[all:vars]
+ansible_user=sngular
+
+[master]
+13.69.59.218
+
+[workers]
+13.80.125.177
+13.88.205.134
+
+[nfs]
+13.88.205.22

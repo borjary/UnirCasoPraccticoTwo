@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-python
+  labels:
+    app: hello-world-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-world-python
+  template:
+    metadata:
+      labels:
+        app: hello-world-python
+    spec:
+      containers:
+      - name: hello-world-python
+        image: borjaromero/hello-world-python
+        ports:
+        - containerPort: 80
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-python-service
+spec:
+  selector:
+    app: hello-world-python
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8084
+      targetPort: 80

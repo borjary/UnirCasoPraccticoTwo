@@ -1,0 +1,4 @@
+---
+
+kubernets_domain: 'borjary.com'
+common_packages: ['net-tools', 'wget']

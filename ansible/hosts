@@ -9,4 +9,4 @@ master1 ansible_host=13.80.125.177
 master2 ansible_host=13.88.205.134
 
 [nfs]
-nfs ansible_host=13.88.205.22
+nfs1 ansible_host=13.88.205.22

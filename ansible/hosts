@@ -5,8 +5,8 @@ ansible_user=sngular
 master1 ansible_host=13.69.59.218 ansible_connection=local
 
 [workers]
-master1 ansible_host=13.80.125.177
-master2 ansible_host=13.88.205.134
+worker1 ansible_host=13.80.125.177
+worker2 ansible_host=13.88.205.134
 
 [nfs]
 nfs1 ansible_host=13.88.205.22

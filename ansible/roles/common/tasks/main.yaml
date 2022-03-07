@@ -29,11 +29,6 @@
     state: present
   become: yes
 
-- name: Disabled SeLinux
-  selinux:
-    state: disabled
-  become: yes
-
 - name: Configure TimeZone
   timezone:
     name: Europe/Madrid

@@ -1,17 +1,17 @@
 
-- name: Instalamos paquetes de NFS
+- name: Install NFS packages
   dnf:
     name: "{{ nfs_packages }}"
     state: present
   become: yes
 
-- name: Creamos el directorio NFS
+- name: Create NFS directory
   file:
     path: /srv/nfs
     state: directory
   become: yes
 
-- name: Agregamos los masters al /etc/exports
+- name: Adding master to /etc/exports
   lineinfile:
     dest: /etc/exports
     line: "/srv/nfs/ {{ hostvars[item].ansible_host }}(rw,sync)"
@@ -20,7 +20,7 @@
   with_items: "{{ groups.master }}"
   become: yes
   
-- name: Agregamos los workers al /etc/exports
+- name: Adding workers to /etc/exports
   lineinfile:
     dest: /etc/exports
     line: "/srv/nfs/ {{ hostvars[item].ansible_host }}(rw,sync)"
@@ -29,7 +29,7 @@
   with_items: "{{ groups.workers }}"
   become: yes
 
-- name: Habilitar e iniciamos el servicio de NFS
+- name: Enabled and start NFS service
   systemd:
     name: nfs-server
     state: started
@@ -37,32 +37,32 @@
     masked: no
   become: yes
   
-- name: Recargamos la configuración del fichero /etc/exports
+- name: Reload config from /etc/exports
   shell: exportfs -r
   become: yes
 
-- name: Habilitamos servicios usados por NFS nfs
+- name: Enabled services used by NFS nfs
   firewalld:
     service: nfs
     permanent: true
     state: enabled
   become: yes
 
-- name: Habilitamos servicios usados por NFS rpc-bind
+- name: Enabled services used by NFS rpc-bind
   firewalld:
     service: rpc-bind
     permanent: true
     state: enabled
   become: yes
 
-- name: Habilitamos servicios usados por NFS mountd
+- name: Enabled services used by NFS mountd
   firewalld:
     service: mountd
     permanent: true
     state: enabled
   become: yes
   
-- name: Reiniciando el servicio Firewalld 
+- name: Reestarting the Firewalld service
   systemd:
     name: firewalld
     state: restarted

@@ -1,0 +1,8 @@
+---
+
+- import_playbook: 01-common-config.yaml
+- import_playbook: 02-nfs-config.yaml
+- import_playbook: 03-master-worker-config.yaml
+- import_playbook: 04-master-config.yaml
+- import_playbook: 05-workers-config.yaml
+- import_playbook: 06-tests-cluster.yaml

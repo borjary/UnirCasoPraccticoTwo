@@ -1,14 +1,14 @@
 ---
 
-- name: Ejecutando kubectl cluster info
+- name: Executting kubectl cluster info
   shell: "kubectl cluster-info"
   register: kubectl_info
   become: yes
   
-- name: Mostrando información del Cluster recién desplegado
+- name: Showing information of the newly deployed Cluster
   debug:
     msg: |
-      "--> SE CULMINÓ EL DESPLIEGUE DEL CLÚSTER DE KUBERNETES"
+      "--> THE DEPLOYMENT OF THE KUBERNETES CLUSTER WAS COMPLETED"
       "{{ kubectl_info.stdout_lines }}"
 
 - name: Ejecutando kubectl get nodes
@@ -16,34 +16,34 @@
   register: kubectl_out
   become: yes
   
-- name: Mostramos el resultado de kubectl get nodes
+- name: Showing result of kubectl get nodes
   debug:
     msg: "{{ kubectl_out.stdout_lines }}"
 
-- name: Ejecutando kubectl get pods A
+- name: Executting kubectl get pods A
   shell: kubectl get pods -A -o wide
   register: kubectl_pods
   become: yes
   
-- name: Mostramos el resultado de kubectl get pods A
+- name: Showing result of kubectl get pods A
   debug:
     msg: "{{ kubectl_pods.stdout_lines }}"
   
-- name: Ejecutando kubectl get namespaces
+- name: Executting kubectl get namespaces
   shell: kubectl get namespaces
   register: kubectl_name
   become: yes
   
-- name: Mostramos el resultado de kubectl get namespaces
+- name: Showing result of kubectl get namespaces
   debug:
     msg: "{{ kubectl_name.stdout_lines }}"
   
-- name: Ejecutando kubectl get svc
+- name: Executting kubectl get svc
   shell: kubectl get svc -A
   register: kubectl_svc
   become: yes
   
-- name: Mostramos el resultado de kubectl get svc
+- name: Showing result of kubectl get svc
   debug:
     msg: "{{ kubectl_svc.stdout_lines }}"
   

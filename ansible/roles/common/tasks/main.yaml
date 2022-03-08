@@ -17,7 +17,7 @@
   with_items: "{{ groups.all }}"
   become: yes
 
-- name: Updating packages system
+- name: Updating system packages
   dnf:
     name: "*"
     state: latest

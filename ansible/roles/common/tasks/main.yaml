@@ -30,6 +30,6 @@
   become: yes
 
 - name: Configure TimeZone
-  community.general.timezone:
+  timezone:
     name: Europe/Madrid
   become: yes

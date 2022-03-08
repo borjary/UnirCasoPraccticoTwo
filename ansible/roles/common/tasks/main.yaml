@@ -29,6 +29,7 @@
     state: present
   become: yes
 
-- timezone:
+- name: Configure TimeZone
+  timezone:
     name: Europe/Madrid
   become: yes

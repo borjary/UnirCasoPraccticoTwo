@@ -20,4 +20,3 @@ variable "ssh_user" {
   description = "Usuario para hacer ssh"
   default = "sngular"
 }
-

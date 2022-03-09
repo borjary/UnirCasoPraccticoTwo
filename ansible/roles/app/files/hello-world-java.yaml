@@ -1,3 +1,5 @@
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -19,7 +21,6 @@ spec:
         image: borjaromero/hello-world-java
         ports:
         - containerPort: 80
-
 ---
 
 apiVersion: v1

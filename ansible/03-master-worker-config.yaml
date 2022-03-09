@@ -1,6 +1,6 @@
 ---
 
-- name: Realizando configuraciones comunes a los masters y workers
+- name: Doing common configuration on master and workers
   hosts: master:workers
   vars_files:
     - "group_vars/master_workers.yaml"

@@ -1,6 +1,6 @@
 ---
 
-- name: Realizando el Despliegue de la aplicación sobre Kubernetes
+- name: Doing app deploy on kubernetes
   hosts: master
   vars_files:
     - "group_vars/app.yaml"

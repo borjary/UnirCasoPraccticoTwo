@@ -1,6 +1,6 @@
 ---
 
-- name: Realizando configuraciones en los Workers
+- name: Doing config on Workers
   hosts: workers
   vars_files:
     - "group_vars/workers.yaml"

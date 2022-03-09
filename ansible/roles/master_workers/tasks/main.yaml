@@ -1,3 +1,4 @@
+---
 
 - name: Ddeactivate the Swap memory
   shell: swapoff -a

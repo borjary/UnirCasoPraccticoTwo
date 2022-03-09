@@ -1,7 +1,7 @@
 ---
-- debug:
-    msg: "The CERT hash of master is: {{ cert_hash }}"
-  when: cert_hash is defined
+#- debug:
+#    msg: "The CERT hash of master is: {{ cert_hash }}"
+#  when: cert_hash is defined
 
 - debug:
     msg: "The toekn hash of master is: {{ token_hash }}"

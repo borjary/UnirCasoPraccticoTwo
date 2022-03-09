@@ -42,7 +42,7 @@
   register: kubeadm_join
   become: yes
   
-- name: RResult of join
+- name: Result of join
   debug:
     msg: "{{ kubeadm_join.stdout_lines }}"
   

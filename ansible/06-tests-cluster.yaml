@@ -1,9 +1,10 @@
 ---
 
 - name: Doing final test on cluster
-    hosts: master
-    vars_files:
-        - "group_vars/tests.yaml"
-    gather_facts: true
-    roles:
-        - tests
+  hosts: master
+  vars_files:
+    - "group_vars/tests.yaml"
+  gather_facts: true
+  roles:
+    - tests
+    

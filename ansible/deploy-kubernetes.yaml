@@ -5,4 +5,4 @@
 - import_playbook: 03-master-worker-config.yaml
 - import_playbook: 04-master-config.yaml
 - import_playbook: 05-workers-config.yaml
-- import_playbook: 06-tests-cluster.yaml
+- import_playbook: 06-test.yaml

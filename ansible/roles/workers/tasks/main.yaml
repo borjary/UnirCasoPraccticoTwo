@@ -1,15 +1,15 @@
 ---
-#- debug:
-#    msg: "The CERT hash of master is: {{ cert_hash }}"
-#  when: cert_hash is defined
+- debug:
+    msg: "The CERT hash of master is: {{ cert_hash }}"
+  when: cert_hash is defined
 
-#- debug:
-#    msg: "The toekn hash of master is: {{ token_hash }}"
-#  when: token_hash is defined
+- debug:
+    msg: "The toekn hash of master is: {{ token_hash }}"
+  when: token_hash is defined
   
-#- debug:
-#    msg: "The IP of master is: {{ ip_master }}"
-#  when: ip_master is defined
+- debug:
+    msg: "The IP of master is: {{ ip_master }}"
+  when: ip_master is defined
   
 - name: Enable the mandatory ports to join the 10250 cluster
   firewalld:

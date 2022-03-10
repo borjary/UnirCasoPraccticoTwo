@@ -1,7 +1,7 @@
 ---
 
 -  name: Retrieve host vars
-   hosts: all
+   hosts: master
    tasks:
     - debug:
-        var={{ hostvars['master1'].cert_hash }}
+        var={{ hostvars['master1'].ansible_host }}

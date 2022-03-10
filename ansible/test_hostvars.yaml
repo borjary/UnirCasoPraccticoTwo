@@ -4,4 +4,4 @@
    hosts: all
    tasks:
     - debug:
-        var=hostvars['master1'].cert_hash
+        var=hostvars[master1].cert_hash

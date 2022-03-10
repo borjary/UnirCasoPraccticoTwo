@@ -4,4 +4,4 @@
    hosts: master
    tasks:
     - debug:
-        var={{ hostvars['master1'].ansible_host }}
+        var={{ hostvars['master1'].token_hash }}

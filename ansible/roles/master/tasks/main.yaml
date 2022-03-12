@@ -37,9 +37,19 @@
   with_items: "{{ groups.workers }}"
   become: yes
 
-- name: test
-  shell: echo {{ vars['ansible_' + ka_interface]['ipv4']['address'] }}
-  tags: test
+- name: Get infos on container
+  docker_container_info:
+    name:{{ container_name }}
+  register: result
+
+- name: Does container exist?
+  debug:
+    msg: "The container {{ 'exists' if result.exists else 'does not exist' }}"
+
+- name: Print information about container
+  debug:
+    var: result.container.NetworkSettings.IPAddress
+  when: result.exists
 
 - debug:
     msg: "Red Docker detectada: {{ docker_network }}"

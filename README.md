@@ -13,8 +13,8 @@ Automatización despliegue  de INFRA en Azure con TERRAFORM y despliegue de Kube
 
 1. Clonamos este repositorio y accedemos a la carperta terraform
 ```console
-XXX@Azure: git clone https://github.com/mlgallego/CasoPractico2 
-XXX@Azure: cd CasoPractico2/terraform
+XXX@Azure: git clone https://github.com/borjary/UnirCasoPraccticoTwo
+XXX@Azure: cd UnirCasoPraccticoTwo/Terraform
 ```
 2. Se debe generar un archivo credentials.tf con lso datos necesarios para poder desplegar en azure
 

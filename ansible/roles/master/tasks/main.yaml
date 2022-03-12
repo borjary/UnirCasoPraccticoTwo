@@ -37,16 +37,6 @@
   with_items: "{{ groups.workers }}"
   become: yes
 
-- debug:
-    msg: "Red Docker detectada: {{ docker_network }}"
-- name: Adding rules to allow acces from containers to master
-  firewalld:
-    rich_rule: "rule family=ipv4 source address={{ docker_network }} accept"
-    permanent: true
-    zone: public
-    state: enabled
-  become: yes
-
 - name: Restart Firewalld service 
   systemd:
     name: firewalld

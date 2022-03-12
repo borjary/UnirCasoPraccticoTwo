@@ -1,13 +1,13 @@
 #  Objetivo del projecto
  
-AutomatizaciÛn despliegue  de INFRA en Azure con TERRAFORM y despliegue de Kubernetes y aplicaciones con ANSIBLE 
-- **Terraform**, como herramienta de cÛdigo para el despliegue de infraestructura y
-- **Ansible** como software de gestiÛn de configuraciÛn y despliegue de aplicaciones y 
+Automatizaci√≥n despliegue  de INFRA en Azure con TERRAFORM y despliegue de Kubernetes y aplicaciones con ANSIBLE 
+- **Terraform**, como herramienta de c√≥digo para el despliegue de infraestructura y
+- **Ansible** como software de gesti√≥n de configuraci√≥n y despliegue de aplicaciones y 
 
 # Terraform
 ## Arquitectura a desplegar en Terraform
 
-![Arquitectura a desplegar con Terraform](Diagrama Caso Practico 2 UNIR)
+![Arquitectura a desplegar con Terraform](Diagrama Caso Practico 2 UNIR.jpeg)
 
 ##  Comandos para el despliegue de la arquitectura de Terraform en Azure
 
@@ -21,7 +21,7 @@ XXX@Azure: cd CasoPractico2/terraform
 XXX@Azure: mv credentials.tf CasoPractico2/terraform/credentials.tf 
 ```
 
-3. Inicializamos un directorio para que Terraform se ejecute en Èl
+3. Inicializamos un directorio para que Terraform se ejecute en √©l
 ```console
 XXX@Azure: terraform init 
 ```
@@ -48,24 +48,24 @@ XXX@Azure: terraform destroy
 
 2. Desplegamos el playbook setup.yaml
 ```console
-XXX@Azure ~/CasoPractico2/ansible/: ansible-playbook ñi hosts setup.yaml
+XXX@Azure ~/CasoPractico2/ansible/: ansible-playbook ‚Äìi hosts setup.yaml
 ```
-> **_NOTE:_** Deberemos introducir ìyesî tantas veces como maquinas tenga nuestro entorno, por defecto 3 veces
+> **_NOTE:_** Deberemos introducir ‚Äúyes‚Äù tantas veces como maquinas tenga nuestro entorno, por defecto 3 veces
 
 3. Desplegamos el playbook start_nfs.yaml
 ```console
-XXX@Azure ~/CasoPractico2/ansible/: ansible-playbook ñi hosts start_nfs.yaml
+XXX@Azure ~/CasoPractico2/ansible/: ansible-playbook ‚Äìi hosts start_nfs.yaml
 ```
 4. Desplegamos el playbook start_kube.yaml
 ```console
-XXX@Azure ~/CasoPractico2/ansible/: ansible-playbook ñi hosts start_kube.yaml
+XXX@Azure ~/CasoPractico2/ansible/: ansible-playbook ‚Äìi hosts start_kube.yaml
 ```
 
-# Despliegue de la aplicaciÛn JupyterNotebook
+# Despliegue de la aplicaci√≥n JupyterNotebook
 ```console
-XXX@Azure ~/CasoPractico2/ansible/: ansible-playbook ñi hosts deploy_first_app.yaml
+XXX@Azure ~/CasoPractico2/ansible/: ansible-playbook ‚Äìi hosts deploy_first_app.yaml
 ```
-> **_NOTE:_** Para acceder a la aplicaciÛn, debemos incluir tu IP p˙blica en Azure para permitir el tr·fico
+> **_NOTE:_** Para acceder a la aplicaci√≥n, debemos incluir tu IP p√∫blica en Azure para permitir el tr√°fico
 
 Volevemos a conectarnos por ssh 
 ```console

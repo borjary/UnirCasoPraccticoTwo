@@ -37,20 +37,6 @@
   with_items: "{{ groups.workers }}"
   become: yes
 
-- name: Get infos on container
-  docker_container_info:
-    name:{{ container_name }}
-  register: result
-
-- name: Does container exist?
-  debug:
-    msg: "The container {{ 'exists' if result.exists else 'does not exist' }}"
-
-- name: Print information about container
-  debug:
-    var: result.container.NetworkSettings.IPAddress
-  when: result.exists
-
 - debug:
     msg: "Red Docker detectada: {{ docker_network }}"
 - name: Adding rules to allow acces from containers to master

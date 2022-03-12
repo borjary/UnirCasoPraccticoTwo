@@ -1,5 +1,5 @@
 #  Objetivo del projecto
-
+ 
 Automatización despliegue  de INFRA en Azure con TERRAFORM y despliegue de Kubernetes y aplicaciones con ANSIBLE 
 - **Terraform**, como herramienta de código para el despliegue de infraestructura y
 - **Ansible** como software de gestión de configuración y despliegue de aplicaciones y 

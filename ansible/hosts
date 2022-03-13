@@ -2,11 +2,10 @@
 ansible_user=sngular
 
 [master]
-master1 ansible_host=13.69.59.218 ansible_connection=local
+master1 ansible_host=20.229.111.83 ansible_connection=local
 
 [workers]
-worker1 ansible_host=13.80.125.177
-worker2 ansible_host=13.88.205.134
+worker1 ansible_host=20.229.111.4
 
 [nfs]
-nfs1 ansible_host=13.88.205.22
+nfs1 ansible_host=20.229.111.6

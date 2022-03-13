@@ -11,9 +11,9 @@
     replace: '# \1'
   become: yes
 
-- name: Restarting the server
-  reboot:
-  become: yes
+#- name: Restarting the server
+#  reboot:
+#  become: yes
 
 - name: Enable the Kernel module br_netfilter
   modprobe:
